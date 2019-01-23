@@ -1,7 +1,7 @@
 import os
-from app import app
+from app import socketio, app
 
-app.run(port=5024)
+socketio.run(app, host="0.0.0.0")
 
 # To Run:
 # python run.py
