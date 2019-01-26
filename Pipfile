@@ -4,15 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-gunicorn = "==19.7.1"
-flask-restplus = "*"
-python-dotenv = "*"
 flask = "*"
 flask_socketio = "*"
+gevent = "*"
+gevent-websocket = "*"
+psutil = "*"
+watchdog = "*"
+file-read-backwards = "*"
 
 [dev-packages]
 pylint = "*"
-black = "*"
+yapf = "*"
 
 [requires]
 python_version = "3.7"

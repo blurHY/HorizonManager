@@ -1,78 +1,148 @@
 <template>
-  <div>
-    <!--Stats cards-->
-    <div class="row">
-      <div class="col-md-6 col-xl-3" v-for="stats in statsCards" :key="stats.title">
-        <stats-card>
-          <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
-            <i :class="stats.icon"></i>
-          </div>
-          <div class="numbers" slot="content">
-            <p>{{stats.title}}</p>
-            {{stats.value}}
-          </div>
-          <div class="stats" slot="footer">
-            <i :class="stats.footerIcon"></i>
-            {{stats.footerText}}
-          </div>
-        </stats-card>
+  <div class="d-flex align-items-stretch">
+    <div class="mainPanel">
+      <!--Stats cards-->
+      <div class="row">
+        <div class="col-md-6 col-xl-3" v-for="stats in statsCards" :key="stats.title">
+          <stats-card>
+            <div class="icon-big text-center" :class="`icon-${stats.type}`" slot="header">
+              <i :class="stats.icon"></i>
+            </div>
+            <div class="numbers" slot="content">
+              <p>{{stats.title}}</p>
+              {{stats.value}}
+            </div>
+            <div class="stats" slot="footer">
+              <i :class="stats.footerIcon"></i>
+              {{stats.footerText}}
+            </div>
+          </stats-card>
+        </div>
+      </div>
+
+      <!--Charts-->
+      <div class="row">
+        <div class="col-12">
+          <chart-card
+            title="System"
+            sub-title="CPU and RAM statistics"
+            :chart-data="systemChart.data"
+            :chart-options="systemChart.options"
+          >
+            <span slot="footer">
+              <i class="ti-reload"></i> Updated 3 minutes ago
+            </span>
+            <div slot="legend">
+              <i class="fa fa-circle text-info"></i> CPU
+              <i class="fa fa-circle text-warning"></i> RAM
+            </div>
+          </chart-card>
+        </div>
+
+        <div class="col-md-6 col-12">
+          <chart-card
+            title="Site Statistics"
+            sub-title="Status of sites"
+            :chart-data="siteChart.data"
+            chart-type="Pie"
+          >
+            <span slot="footer">
+              <i class="ti-reload"></i> Updated 3 minutes ago
+            </span>
+            <div slot="legend">
+              <i class="fa fa-circle text-info"></i> Crawled
+              <i class="fa fa-circle text-warning"></i> Pending
+              <i class="fa fa-circle text-danger"></i> Syncing
+            </div>
+          </chart-card>
+        </div>
+
+        <div class="col-md-6 col-12">
+          <card title="Control Panel">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  ZeroNet
+                  <button
+                    class="btn btn-sm btn-outline-success ml-2"
+                    v-if="!zeronetStatus"
+                  >Start</button>
+                  <button class="btn btn-sm btn-outline-warning ml-2" v-if="zeronetStatus">Stop</button>
+                  <button class="btn btn-sm btn-outline-danger ml-2" v-if="zeronetStatus">Kill</button>
+                </div>
+                <div :class="{'text-success':zeronetStatus}">
+                  {{upOrDown(zeronetStatus)}}
+                  <i class="fa fa-power-off"></i>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  HorizonSpider
+                  <button
+                    class="btn btn-sm btn-outline-success ml-2"
+                    v-if="!spiderStatus"
+                  >Start</button>
+                  <button class="btn btn-sm btn-outline-warning ml-2" v-if="spiderStatus">Stop</button>
+                  <button class="btn btn-sm btn-outline-danger ml-2" v-if="spiderStatus">Kill</button>
+                </div>
+                <div :class="{'text-success':spiderStatus}">
+                  {{upOrDown(spiderStatus)}}
+                  <i class="fa fa-power-off"></i>
+                </div>
+              </li>
+            </ul>
+            <div slot="footer">
+              <i class="fa fa-terminal"></i>
+              <span class="pl-2">{{status}}</span>
+            </div>
+          </card>
+        </div>
       </div>
     </div>
-
-    <!--Charts-->
-    <div class="row">
-      <div class="col-12">
-        <chart-card
-          title="System"
-          sub-title="CPU and RAM statistics"
-          :chart-data="systemChart.data"
-          :chart-options="systemChart.options"
-        >
-          <span slot="footer">
-            <i class="ti-reload"></i> Updated 3 minutes ago
-          </span>
-          <div slot="legend">
-            <i class="fa fa-circle text-info"></i> CPU
-            <i class="fa fa-circle text-warning"></i> RAM
-          </div>
-        </chart-card>
-      </div>
-
-      <div class="col-md-6 col-12">
-        <chart-card
-          title="Site Statistics"
-          sub-title="Status of sites"
-          :chart-data="siteChart.data"
-          chart-type="Pie"
-        >
-          <span slot="footer">
-            <i class="ti-reload"></i> Updated 3 minutes ago
-          </span>
-          <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Crawled
-            <i class="fa fa-circle text-warning"></i> Pending
-            <i class="fa fa-circle text-danger"></i> Syncing
-          </div>
-        </chart-card>
-      </div>
-
-      <div class="col-md-6 col-12">
-        <card title="Control Panel">
-          <button type="button" class="btn btn-outline-primary m-2">Restart Spider</button>
-          <button type="button" class="btn btn-outline-warning m-2">Terminate Spider</button>
-          <button type="button" class="btn btn-outline-danger m-2">Full Restart</button>
-        </card>
-      </div>
+    <div class="logsPanel flex-grow-1 ml-4" v-if>
+      <card title="Log" subTitle="Logs of Spider and ZeroNet">
+        <div class="card-body">
+          <LogPage></LogPage>
+        </div>
+      </card>
     </div>
   </div>
 </template>
 <script>
 import { StatsCard, ChartCard } from "@/components/index";
 import Chartist from "chartist";
+import LogPage from "./LogPage";
 export default {
   components: {
     StatsCard,
-    ChartCard
+    ChartCard,
+    LogPage
+  },
+  methods: {
+    restartSpider() {
+      this.$socket.emit("restartSpider");
+    },
+    terminateSpider() {
+      this.$socket.emit("terminateSpider");
+    },
+    fullRestart() {
+      this.$socket.emit("fullRestart");
+    },
+    upOrDown(bool) {
+      return bool ? "Up" : "Down";
+    }
+  },
+  sockets: {
+    connect() {
+      console.log("Connected");
+    },
+    addLogs(arr) {
+      console.log("Logs addded: " + arr.length);
+    },
+    setStatus(msg) {
+      console.log("Status: " + msg);
+      this.status = msg;
+    }
   },
   /**
    * Chart data used to render stats, charts. Should be replaced with server data
@@ -151,10 +221,24 @@ export default {
           series: [62, 32, 6]
         },
         options: {}
-      }
+      },
+      status: "Unknown",
+      zeronetStatus: false,
+      spiderStatus: false
     };
   }
 };
 </script>
 <style>
+.mainPanel {
+  max-width: 1000px;
+}
+.logsPanel .card {
+  height: 100%;
+}
+@media screen and (max-width: 1800px) {
+  .logsPanel {
+    display: none;
+  }
+}
 </style>

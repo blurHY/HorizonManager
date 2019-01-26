@@ -1,7 +1,7 @@
 import os
-from app import socketio, app
+from app import sio, app
 
-socketio.run(app, host="0.0.0.0")
+sio.run(app, host="0.0.0.0", port=5000, debug=True)
 
 # To Run:
 # python run.py

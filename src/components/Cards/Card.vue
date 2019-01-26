@@ -13,8 +13,7 @@
       <slot></slot>
     </div>
     <slot name="raw-content"></slot>
-    <div class="card-footer" v-if="$slots.footer">
-      <hr>
+    <div class="card-footer text-muted bg-white" v-if="$slots.footer">
       <slot name="footer"></slot>
     </div>
   </div>
