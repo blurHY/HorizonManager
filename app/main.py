@@ -217,6 +217,9 @@ def startBroadcastingStats():
     badgeThread = threading.Thread(target=lambda: loop(30, updateBadgeStats))
     statsThread = threading.Thread(target=lambda: loop(1.5, updateGraphStats))
 
+    badgeThread.daemon = True
+    statsThread.daemon = True
+
     badgeThread.start()
     statsThread.start()
 

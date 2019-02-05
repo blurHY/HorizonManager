@@ -50,6 +50,7 @@ def popenAndCall(onStart, onExit, popenArgs):
 
     thread = threading.Thread(
         target=runInThread, args=(onStart, onExit, popenArgs))
+    thread.daemon = True
     thread.start()
     return thread
 
