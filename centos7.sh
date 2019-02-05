@@ -10,6 +10,7 @@ yum install python36u-devel
 yum install nodejs
 yum install npm
 npm i yarn -g
+sudo -H pip install -U pipenv
 mkdir Horizon
 cd Horizon
 git clone https://github.com/HelloZeroNet/ZeroNet
@@ -24,3 +25,5 @@ git clone https://github.com/blurHY/HorizonPanel
 cd HorizonPanel
 yarn
 yarn build
+pipenv install
+echo "Installation completed, but not configured"
