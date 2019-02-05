@@ -18,8 +18,14 @@ def check_pid(pid):
         return True
 
 
-def checkIfAlreadyRunning():
-    pass
+def checkIfAlreadyRunning(proc):  # TODO: Check port and lock file
+    def wrapper(func):
+        if isRunning(proc):
+            main.showMessage("error", "The process is already running")
+        else:
+            func()
+
+    return wrapper
 
 
 def isRunning(proc):
@@ -45,19 +51,13 @@ def popenAndCall(onStart, onExit, popenArgs):
     return thread
 
 
-def assignZeroNetProcess(p):
-    global zeronetProc
-    zeronetProc = p
-    main.updateProcessStatus()
-
-
-def assignSpiderProcess(p):
-    global spiderProc
-    spiderProc = p
-    main.updateProcessStatus()
-
-
+@checkIfAlreadyRunning(zeronetProc)
 def startZeroNet():
+    def assignZeroNetProcess(p):
+        global zeronetProc
+        zeronetProc = p
+        main.updateProcessStatus()
+
     popenAndCall(
         assignZeroNetProcess,
         main.updateProcessStatus,
@@ -66,7 +66,13 @@ def startZeroNet():
     )
 
 
+@checkIfAlreadyRunning(spiderProc)
 def startSpider():
+    def assignSpiderProcess(p):
+        global spiderProc
+        spiderProc = p
+        main.updateProcessStatus()
+
     popenAndCall(
         assignSpiderProcess,
         main.updateProcessStatus,

@@ -193,7 +193,7 @@ export default {
       this.addPanelLogs("Server connected");
     },
     disconnect() {
-      this.showMessage(["warning", "Server disconnected"]);
+      this.showMessage("warning", "Server disconnected");
       this.setStatus("Disconnected");
     },
     setStatus(msg) {
