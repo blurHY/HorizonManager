@@ -15,7 +15,7 @@ mkdir Horizon
 cd Horizon
 git clone https://github.com/HelloZeroNet/ZeroNet
 cd ZeroNet
-pip3.6 install -r requirements.txt
+pip install -r requirements.txt
 cd ..
 git clone https://github.com/blurHY/HorizonSpider
 cd HorizonSpider
