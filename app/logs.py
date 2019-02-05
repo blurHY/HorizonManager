@@ -133,5 +133,7 @@ def watchLogs():
 
 def countLog(logType, lastNHour=24):
     hslogs = getPeriodLog(conf.spiderLogFile, lastNHour)
+    if not hslogs:
+        return 0
     filtered = list(filter(lambda x: logType in x, hslogs))
     return filtered
