@@ -121,13 +121,6 @@ def disconnected():
     leave_room("admins")
 
 
-@sio.on("subscribeLogs")
-@apiLoginCheck  # Don't change the order
-def subscribeLogs():
-    print("Logs subscribed")
-    join_room("admins")
-
-
 @sio.on("processControl")
 @apiLoginCheck
 def processControl(proc, action):

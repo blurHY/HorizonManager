@@ -189,7 +189,6 @@ export default {
   sockets: {
     connect() {
       console.log("Connected");
-      this.$socket.emit("subscribeLogs");
       this.addPanelLogs("Server connected");
     },
     disconnect() {

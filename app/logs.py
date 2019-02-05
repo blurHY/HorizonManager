@@ -6,7 +6,7 @@ from flask_socketio import emit
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-from . import conf, main
+from . import conf, main, sio
 
 
 class MyHandler(FileSystemEventHandler):
@@ -48,27 +48,30 @@ def getDateFromLine(line):
 def getPeriodLog(path, lastNHour=24):
     now = datetime.datetime.now()
     last = now - datetime.timedelta(hours=lastNHour)
-    with FileReadBackwards(path, encoding="utf-8") as frb:
-        arr = []
-        lastLine = ""
-        lastValid = False
-        while True:
-            l = frb.readline()
-            if lastLine:
-                if lastValid:
-                    date_parsed = getDateFromLine(lastLine)
-                    if date_parsed and date_parsed > last:
-                        arr.append(lastLine)
-                        lastLine = l
+    try:
+        with FileReadBackwards(path, encoding="utf-8") as frb:
+            arr = []
+            lastLine = ""
+            lastValid = False
+            while True:
+                l = frb.readline()
+                if lastLine:
+                    if lastValid:
+                        date_parsed = getDateFromLine(lastLine)
+                        if date_parsed and date_parsed > last:
+                            arr.append(lastLine)
+                            lastLine = l
+                    else:
+                        lastLine = l + "\n" + lastLine
                 else:
-                    lastLine = l + "\n" + lastLine
-            else:
-                lastLine = l
-            lastValid = isValidLogLine(l)
-            if not l:
-                break
-
-    return list(reversed(arr))
+                    lastLine = l
+                lastValid = isValidLogLine(l)
+                if not l:
+                    break
+    except FileNotFoundError:
+        main.showMessage("error", f"Log file not found: {path}")
+    else:
+        return list(reversed(arr))
 
 
 def mixLogs(logsA, logsB):
@@ -114,13 +117,13 @@ def watchLogs():
         elif e.src_path == conf.spiderLogFile:
             more = fs.read()
         if more is not None:
-            emit("addLogs", splitLogs(more))
+            sio.emit("addLogs", splitLogs(more), room="admins")
 
-    emit(
-        "addLogs",
-        mixLogs(
-            getPeriodLog(conf.zeronetLogFile, 0.1),
-            getPeriodLog(conf.spiderLogFile, 0.1)))
+    # sio.emit(
+    #     "addLogs",
+    #     mixLogs(
+    #         getPeriodLog(conf.zeronetLogFile, 0.1),
+    #         getPeriodLog(conf.spiderLogFile, 0.1)))
 
     watch(conf.zeronetLogs, readMore)
     watch(conf.spiderLogs, readMore)
