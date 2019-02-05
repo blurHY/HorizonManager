@@ -9,13 +9,14 @@ yum install python36u-pip
 yum install python36u-devel
 yum install nodejs
 yum install npm
+yum install python-pip # python2
 npm i yarn -g
 sudo -H pip install -U pipenv
 mkdir Horizon
 cd Horizon
 git clone https://github.com/HelloZeroNet/ZeroNet
 cd ZeroNet
-pip install -r requirements.txt
+pip2.7 install -r requirements.txt
 cd ..
 git clone https://github.com/blurHY/HorizonSpider
 cd HorizonSpider
