@@ -1,7 +1,8 @@
+import datetime
 import os
 import shutil
-import time
 import threading
+import time
 from os.path import join
 
 import flask
@@ -10,9 +11,11 @@ import psutil
 from flask import Flask, current_app, send_file
 from flask_socketio import emit, join_room, leave_room
 from humanize import naturalsize
-import datetime
 
-import app, login_manager, process, sio, users, logs
+import logs
+import process
+
+from . import app, login_manager, sio, users
 from .flaskConfig import flaskConfig
 
 
