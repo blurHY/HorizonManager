@@ -70,7 +70,7 @@ def getPeriodLog(path, lastNHour=24):
                 if not l:
                     break
     except FileNotFoundError:
-        main.showMessage("error", f"Log file not found: {path}")
+        print(f"Log file not found: {path}")
     else:
         return list(reversed(arr))
 
