@@ -100,14 +100,6 @@ def watchLogs():
     fz = None
     fs = None
 
-    def fileCreated():
-        nonlocal fz, fs
-        fz = open(conf.zeronetLogFile)
-        fs = open(conf.spiderLogFile)
-
-        fz.seek(0, os.SEEK_END)
-        fs.seek(0, os.SEEK_END)
-
     def readMore(e):
         more = None
         if fs == None:
