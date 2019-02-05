@@ -13,6 +13,7 @@ watchdog = "*"
 file-read-backwards = "*"
 flask-login = "*"
 humanize = "*"
+better-exceptions = "*"
 
 [dev-packages]
 pylint = "*"

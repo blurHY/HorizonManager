@@ -125,11 +125,7 @@ def disconnected():
 @apiLoginCheck  # Don't change the order
 def subscribeLogs():
     print("Logs subscribed")
-
-    try:
-        logs.watchLogs()
-    except:
-        showMessage("error", "Failed to watch logs")
+    join_room("admins")
 
 
 @sio.on("processControl")
@@ -228,3 +224,4 @@ def startBroadcastingStats():
 
 
 startBroadcastingStats()
+logs.watchLogs()

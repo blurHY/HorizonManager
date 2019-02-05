@@ -6,7 +6,7 @@ from flask_socketio import emit
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-from . import conf
+from . import conf, main
 
 
 class MyHandler(FileSystemEventHandler):
@@ -97,14 +97,25 @@ def splitLogs(text):
 
 
 def watchLogs():
-    fz = open(conf.zeronetLogFile)
-    fs = open(conf.spiderLogFile)
+    fz = None
+    fs = None
 
-    fz.seek(0, os.SEEK_END)
-    fs.seek(0, os.SEEK_END)
+    def fileCreated():
+        nonlocal fz, fs
+        fz = open(conf.zeronetLogFile)
+        fs = open(conf.spiderLogFile)
+
+        fz.seek(0, os.SEEK_END)
+        fs.seek(0, os.SEEK_END)
 
     def readMore(e):
         more = None
+        if fs == None:
+            fs = open(conf.spiderLogFile)
+            fs.seek(0, os.SEEK_END)
+        if fz == None:
+            fz = open(conf.zeronetLogFile)
+            fz.seek(0, os.SEEK_END)
         if e.src_path == conf.zeronetLogFile:
             more = fz.read()
         elif e.src_path == conf.spiderLogFile:
