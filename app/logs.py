@@ -1,5 +1,6 @@
 import time, datetime, re
 import os
+import pathlib
 
 from file_read_backwards import FileReadBackwards
 from flask_socketio import emit
@@ -124,6 +125,7 @@ def watchLogs():
     #     mixLogs(
     #         getPeriodLog(conf.zeronetLogFile, 0.1),
     #         getPeriodLog(conf.spiderLogFile, 0.1)))
+    pathlib.Path(conf.zeronetLogs).mkdir(parents=True, exist_ok=True)
 
     watch(conf.zeronetLogs, readMore)
     watch(conf.spiderLogs, readMore)

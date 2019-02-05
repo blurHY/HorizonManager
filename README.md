@@ -25,6 +25,8 @@ Install dependencies with pipenv:
 pipenv install
 ```
 
+Requires python >=3.6
+
 # Usage
 
 ```bash
@@ -34,3 +36,17 @@ pipenv run python run.py
 You can define environment variables to configure the panel.
 
 If you didn't specify a port, you can visit http://127.1:5000 to have a look.
+
+## Nginx
+
+I recommend that you should use nginx as reverse proxy for the panel.
+
+And use https to keep it safe
+
+## Better_exceptions
+
+To enable better_exceptions:
+
+```bash
+export BETTER_EXCEPTIONS=1 
+```
