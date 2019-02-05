@@ -65,8 +65,8 @@ def startZeroNet():
     popenAndCall(
         assignZeroNetProcess,
         main.updateProcessStatus,
-        [[conf.python2Path, conf.zeronetRoot + "zeronet.py"] + conf.zeronetArgs
-         ],
+        [[conf.python2Path,
+          os.path.join(conf.zeronetRoot, "zeronet.py")] + conf.zeronetArgs],
     )
 
 
@@ -80,6 +80,7 @@ def startSpider():
     popenAndCall(
         assignSpiderProcess,
         main.updateProcessStatus,
-        [[conf.python3Path, conf.spiderRoot + "HorizonSpider.py"] +
-         conf.spiderArgs],
+        [[conf.python3Path,
+          os.path.join(conf.spiderRoot, "HorizonSpider.py")] + conf.spiderArgs
+         ],
     )
