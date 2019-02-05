@@ -13,7 +13,7 @@ export default {
   watch: {
     "$root.logs"() {
       if (this.$root.logs.length > 50) this.$root.logs.shift();
-      if (folowTail)
+      if (this.folowTail)
         this.$el.parentElement.scrollTop = this.$el.parentElement.scrollHeight;
     }
   },
