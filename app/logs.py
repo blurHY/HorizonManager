@@ -101,6 +101,7 @@ def watchLogs():
     fs = None
 
     def readMore(e):
+        nonlocal fz, fs
         more = None
         if fs == None:
             fs = open(conf.spiderLogFile)
