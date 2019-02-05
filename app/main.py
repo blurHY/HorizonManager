@@ -166,13 +166,18 @@ def updateBadgeStats():
     usageTuple = shutil.disk_usage("/")
     sio.emit(
         "updateBadgeStats", {
-            "disk": naturalsize(usageTuple[1]),
-            "disk_total": naturalsize(usageTuple[0]),
+            "disk":
+            naturalsize(usageTuple[1]),
+            "disk_total":
+            naturalsize(usageTuple[0]),
             "error":
-            len(logs.countLog("ERROR")) + len(logs.countLog("CRITICAL")),
-            "warning": len(logs.countLog("WARNING")),
-            "sites": 0,
-            "time": datetime.datetime.utcnow().timestamp() * 1000
+            len(logs.filterLog("ERROR")) + len(logs.filterLog("CRITICAL")),
+            "warning":
+            len(logs.filterLog("WARNING")),
+            "sites":
+            0,
+            "time":
+            datetime.datetime.utcnow().timestamp() * 1000
         },
         room="admins")
 
