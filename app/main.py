@@ -12,7 +12,7 @@ from flask import Flask, current_app, send_file
 from flask_socketio import emit, join_room, leave_room
 from humanize import naturalsize
 
-import app.logs, app.process
+from . import logs, process
 
 from . import app, login_manager, sio, users
 from .flaskConfig import flaskConfig

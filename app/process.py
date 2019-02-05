@@ -19,13 +19,16 @@ def check_pid(pid):
 
 
 def checkIfAlreadyRunning(proc):  # TODO: Check port and lock file
-    def wrapper(func):
-        if isRunning(proc):
-            main.showMessage("error", "The process is already running")
-        else:
-            func()
+    def decorate(func):
+        def wrapper(*args, **kwargs):
+            if isRunning(proc):
+                main.showMessage("error", "The process is already running")
+            else:
+                func(*args, **kwargs)
 
-    return wrapper
+        return wrapper
+
+    return decorate
 
 
 def isRunning(proc):
