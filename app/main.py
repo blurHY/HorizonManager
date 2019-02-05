@@ -12,7 +12,7 @@ from flask_socketio import emit, join_room, leave_room
 from humanize import naturalsize
 import datetime
 
-from . import app, login_manager, process, sio, users, logs
+import app, login_manager, process, sio, users, logs
 from .flaskConfig import flaskConfig
 
 
