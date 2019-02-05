@@ -1,0 +1,196 @@
+2019-01-06 10:11:14.838 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: fr
+2019-01-06 10:11:14.844 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 
+<p>Cher journal,</p>
+
+<p>Sava,Len: 1529
+2019-01-06 10:11:14.892 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: fr
+2019-01-06 10:11:14.948 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 
+<p>Dans une <a href="  Benoît,Len: 1089
+2019-01-06 10:11:14.974 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: fr
+2019-01-06 10:11:14.979 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:11:15.082 | INFO     | __main__:mainProcess:158 - 1QFNPBiS5GSFNAg3qzuFyVrzePwuWt9n3y New Site: fullCrawl
+2019-01-06 10:15:22.178 | INFO     | __main__:fullCrawl:71 - Got 0 feeds from 1QFNPBiS5GSFNAg3qzuFyVrzePwuWt9n3y
+2019-01-06 10:15:22.404 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:22.409 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 0 feeds
+2019-01-06 10:15:22.411 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:22.420 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:22.492 | INFO     | __main__:fullCrawl:92 - Got 0 links from 1QFNPBiS5GSFNAg3qzuFyVrzePwuWt9n3y
+2019-01-06 10:15:22.493 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:22.494 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:15:22.494 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:15:22.507 | INFO     | __main__:mainProcess:161 - 1saNTAPu9n7Pqb8SeLbGtdkLnFYZJUKXo Not Downloaded
+2019-01-06 10:15:22.509 | INFO     | __main__:mainProcess:158 - 125Ga1L7yoRu4kho4LpSVGoW6WwjbmzDEc New Site: fullCrawl
+2019-01-06 10:15:32.690 | INFO     | __main__:fullCrawl:71 - Got 0 feeds from 125Ga1L7yoRu4kho4LpSVGoW6WwjbmzDEc
+2019-01-06 10:15:32.730 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:32.732 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 0 feeds
+2019-01-06 10:15:32.732 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:32.734 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:32.753 | INFO     | __main__:fullCrawl:92 - Got 1 links from 125Ga1L7yoRu4kho4LpSVGoW6WwjbmzDEc
+2019-01-06 10:15:32.754 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:32.754 | DEBUG    | ZeroWs:addZite:10 - Request site:172hEk5h6r1D7EJyQVd7gfu3TTBsokVfZf
+2019-01-06 10:15:34.920 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:35.031 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:15:35.032 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:15:35.179 | INFO     | __main__:mainProcess:158 - 1FMWKFweT5ADXajRJatNdyrdchGqyZzKeD New Site: fullCrawl
+2019-01-06 10:15:36.809 | DEBUG    | ZeroWs:crawlFeeds:42 - Querying all feeds
+2019-01-06 10:15:36.848 | DEBUG    | ZeroWs:crawlFeeds:47 - This site has dbschama.json. Feeds crawled
+2019-01-06 10:15:36.848 | INFO     | __main__:fullCrawl:71 - Got 8 feeds from 1FMWKFweT5ADXajRJatNdyrdchGqyZzKeD
+2019-01-06 10:15:36.854 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:36.854 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 8 feeds
+2019-01-06 10:15:36.855 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:36.855 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:37.036 | INFO     | __main__:fullCrawl:92 - Got 15 links from 1FMWKFweT5ADXajRJatNdyrdchGqyZzKeD
+2019-01-06 10:15:37.037 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:37.037 | DEBUG    | ZeroWs:addZite:10 - Request site:1FHN4oukAG7zFUpiC9L2iz7QpQVTuT3xkz
+2019-01-06 10:15:37.040 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.040 | DEBUG    | ZeroWs:addZite:10 - Request site:1DKi1k1V3WAkKwxKqySDmknVNTccBmJ7Ku
+2019-01-06 10:15:37.042 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.042 | DEBUG    | ZeroWs:addZite:10 - Request site:1Vp5LH4wegCaqeB72yMw2jgNdVm4aR7ET
+2019-01-06 10:15:37.043 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.044 | DEBUG    | ZeroWs:addZite:10 - Request site:1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D
+2019-01-06 10:15:37.046 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.046 | DEBUG    | ZeroWs:addZite:10 - Request site:1J7duUJ7NBvPazCbA7EDK4xfKaXNV2EQdK
+2019-01-06 10:15:37.048 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.048 | DEBUG    | ZeroWs:addZite:10 - Request site:1NPAmKPbZU33tAStGqygs8FD2bRq7zYoHb
+2019-01-06 10:15:37.051 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.051 | DEBUG    | ZeroWs:addZite:10 - Request site:193psz3yGj7EH39nyKb4A2KKBXEHT49Csf
+2019-01-06 10:15:37.052 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.053 | DEBUG    | ZeroWs:addZite:10 - Request site:1E4XLtKC59YV8V9JQ4AkeqSvqECSvrUtnv
+2019-01-06 10:15:37.055 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.056 | DEBUG    | ZeroWs:addZite:10 - Request site:1Apr5ba6u9Nz6eFASmFrefGvyBKkM76QgE
+2019-01-06 10:15:37.060 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.060 | DEBUG    | ZeroWs:addZite:10 - Request site:19BPUZYAdCMxExKHoVSG3cG95wfUfFTEC9
+2019-01-06 10:15:37.062 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.063 | DEBUG    | ZeroWs:addZite:10 - Request site:165eqHdoQfyf7CVGqtVCGNDvMBZhwVSJBL
+2019-01-06 10:15:37.064 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.064 | DEBUG    | ZeroWs:addZite:10 - Request site:1GRYnz73jSXoMMZNU3nSmbCFA3twuitcoo
+2019-01-06 10:15:37.065 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.066 | DEBUG    | ZeroWs:addZite:10 - Request site:15hL2gR4oCSgKBbndn3MxY8Hc5xoy1vqCe
+2019-01-06 10:15:37.067 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.068 | DEBUG    | ZeroWs:addZite:10 - Request site:1LULE6frq3kw2vbhe4i6ArUTo4YT99Czbj
+2019-01-06 10:15:37.070 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.070 | DEBUG    | ZeroWs:addZite:10 - Request site:1MxvDmGn5fipn7cyjXAMyMZPH3SyhwfZkw
+2019-01-06 10:15:37.073 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:37.074 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:15:37.081 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: Post here the topics describin,Len: 73
+2019-01-06 10:15:37.445 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: en
+2019-01-06 10:15:37.494 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: Post here the topics describin,Len: 67
+2019-01-06 10:15:37.519 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: en
+2019-01-06 10:15:37.520 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: ,Len: 0
+2019-01-06 10:15:37.521 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: ,Len: 0
+2019-01-06 10:15:37.521 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: ,Len: 0
+2019-01-06 10:15:37.521 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: ,Len: 0
+2019-01-06 10:15:37.524 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: box1:data/users/15hL2gR4oCSgKB,Len: 56
+2019-01-06 10:15:37.572 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: so
+2019-01-06 10:15:37.573 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: ^_^
+box1:data/users/1FHN4oukAG,Len: 60
+2019-01-06 10:15:37.684 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: sl
+2019-01-06 10:15:37.685 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:15:37.798 | INFO     | __main__:mainProcess:158 - 1EwAh4KUfGgRw1re7uyrmTUWKZYV9SHVcW New Site: fullCrawl
+2019-01-06 10:15:37.880 | DEBUG    | ZeroWs:crawlFeeds:42 - Querying all feeds
+2019-01-06 10:15:37.880 | DEBUG    | ZeroWs:crawlFeeds:47 - This site has dbschama.json. Feeds crawled
+2019-01-06 10:15:37.880 | INFO     | __main__:fullCrawl:71 - Got 0 feeds from 1EwAh4KUfGgRw1re7uyrmTUWKZYV9SHVcW
+2019-01-06 10:15:37.884 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:37.884 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 0 feeds
+2019-01-06 10:15:37.884 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:37.885 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:38.043 | INFO     | __main__:fullCrawl:92 - Got 0 links from 1EwAh4KUfGgRw1re7uyrmTUWKZYV9SHVcW
+2019-01-06 10:15:38.043 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:38.044 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:15:38.044 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:15:38.051 | INFO     | __main__:mainProcess:158 - 1FZUX87jxtYmnM6yAFFvCWa92tHC5X6AAp New Site: fullCrawl
+2019-01-06 10:15:45.592 | INFO     | __main__:fullCrawl:71 - Got 0 feeds from 1FZUX87jxtYmnM6yAFFvCWa92tHC5X6AAp
+2019-01-06 10:15:45.624 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:45.628 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 0 feeds
+2019-01-06 10:15:45.628 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:45.629 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index3.html
+2019-01-06 10:15:45.640 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:45.644 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index2.html
+2019-01-06 10:15:45.645 | INFO     | __main__:fullCrawl:92 - Got 1 links from 1FZUX87jxtYmnM6yAFFvCWa92tHC5X6AAp
+2019-01-06 10:15:45.646 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:45.646 | DEBUG    | ZeroWs:addZite:10 - Request site:1iD5ZQJMNXu43w1qLB8sfdHVKppVMduGz
+2019-01-06 10:15:46.497 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:15:46.508 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:15:46.509 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:15:46.552 | INFO     | __main__:mainProcess:158 - 147nKEb9bBJgBDgQytEQhmiGjF8e6HkEua New Site: fullCrawl
+2019-01-06 10:15:46.658 | DEBUG    | ZeroWs:crawlFeeds:42 - Querying all feeds
+2019-01-06 10:15:46.659 | DEBUG    | ZeroWs:crawlFeeds:47 - This site has dbschama.json. Feeds crawled
+2019-01-06 10:15:46.660 | INFO     | __main__:fullCrawl:71 - Got 0 feeds from 147nKEb9bBJgBDgQytEQhmiGjF8e6HkEua
+2019-01-06 10:15:46.663 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:46.664 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 0 feeds
+2019-01-06 10:15:46.664 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:46.664 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:46.672 | INFO     | __main__:fullCrawl:92 - Got 0 links from 147nKEb9bBJgBDgQytEQhmiGjF8e6HkEua
+2019-01-06 10:15:46.673 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:46.673 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:15:46.673 | DEBUG    | __main__:fullCrawl:100 - Store analyzed feeds
+2019-01-06 10:15:46.679 | INFO     | __main__:mainProcess:158 - 1JZJMbERA9RLo3TPqEsQjXjybtWdBmUrg2 New Site: fullCrawl
+2019-01-06 10:15:46.799 | DEBUG    | ZeroWs:crawlFeeds:42 - Querying all feeds
+2019-01-06 10:15:46.967 | DEBUG    | ZeroWs:crawlFeeds:47 - This site has dbschama.json. Feeds crawled
+2019-01-06 10:15:46.968 | INFO     | __main__:fullCrawl:71 - Got 20 feeds from 1JZJMbERA9RLo3TPqEsQjXjybtWdBmUrg2
+2019-01-06 10:15:46.972 | DEBUG    | __main__:fullCrawl:88 - Scanning files and feeds
+2019-01-06 10:15:46.973 | INFO     | ZiteAnalyze:crawlLinksFeeds:105 - 20 feeds
+2019-01-06 10:15:46.981 | DEBUG    | __main__:scanAllFiles:106 - Entered file scanning loop
+2019-01-06 10:15:46.982 | DEBUG    | __main__:scanAllFiles:113 - Scan file: index.html
+2019-01-06 10:15:46.989 | DEBUG    | __main__:scanAllFiles:113 - Scan file: txtToHtmlForFreedonn.html
+2019-01-06 10:15:46.991 | DEBUG    | __main__:scanAllFiles:113 - Scan file: nCircle.html
+2019-01-06 10:15:46.992 | DEBUG    | __main__:scanAllFiles:113 - Scan file: nQueen.html
+2019-01-06 10:15:47.033 | INFO     | __main__:fullCrawl:92 - Got 9 links from 1JZJMbERA9RLo3TPqEsQjXjybtWdBmUrg2
+2019-01-06 10:15:47.034 | DEBUG    | __main__:fullCrawl:94 - Request crawled links
+2019-01-06 10:15:47.034 | DEBUG    | ZeroWs:addZite:10 - Request site:1KwwY5yxmKYtEXeyRCe6thjFiEDnjo4SJV
+2019-01-06 10:18:42.687 | DEBUG    | ZeroWs:addZite:10 - Request site:1JZJMbERA9RLo3TPqEsQjXjybtWdBmUrg2
+2019-01-06 10:19:09.453 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:09.514 | DEBUG    | ZeroWs:addZite:10 - Request site:1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D
+2019-01-06 10:19:11.777 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:11.857 | DEBUG    | ZeroWs:addZite:10 - Request site:1oWoUktrXo1p6vkviJUyNXkGHyWznTtRH
+2019-01-06 10:19:12.158 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:12.163 | DEBUG    | ZeroWs:addZite:10 - Request site:1iD5ZQJMNXu43w1qLB8sfdHVKppVMduGz
+2019-01-06 10:19:12.188 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:12.188 | DEBUG    | ZeroWs:addZite:10 - Request site:1Mw3oALiupnU9N7rhcBU8ex9gAs7x9a6u8
+2019-01-06 10:19:25.370 | DEBUG    | ZeroWs:addZite:10 - Request site:1BBS88e7nioyNZQoz8DRgvgky964ARZxr
+2019-01-06 10:19:28.861 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:28.888 | DEBUG    | ZeroWs:addZite:10 - Request site:1Name2Csa5rZmRBucPFY8re1UpQdsmRNmq
+2019-01-06 10:19:29.966 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:29.976 | DEBUG    | ZeroWs:addZite:10 - Request site:1Name2NXVi1RDPDgf5617UoW7xA6YrhM9F
+2019-01-06 10:19:30.085 | WARNING  | ZeroWs:addZites:58 - Site already added
+2019-01-06 10:19:30.095 | DEBUG    | __main__:fullCrawl:97 - Analyze a few feeds via NLP
+2019-01-06 10:19:30.128 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 发现论坛发帖比写博文方便，以后一般的文章都会发在技术论坛:/,Len: 413
+2019-01-06 10:19:31.223 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: no
+2019-01-06 10:19:31.342 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 上零网时间长了，总有很多屏蔽的id。特别是论坛里有几个疑似机,Len: 763
+2019-01-06 10:19:31.636 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: vi
+2019-01-06 10:19:31.643 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 零网网站默认的ID注册系统是ZeroID.bit: 
+
+* ,Len: 863
+2019-01-06 10:19:31.839 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: ca
+2019-01-06 10:19:31.864 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 这个问题研究了很久，终于解决了，和大家分享一下。先看一下效果,Len: 954
+2019-01-06 10:19:31.988 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: vi
+2019-01-06 10:19:31.998 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: *   本站网址  
+
+* * *
+
+*   请先添加本站链,Len: 88
+2019-01-06 10:19:32.011 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: zh-cn
+2019-01-06 10:19:32.277 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 很简单的基础问题，老司机请忽略。
+
+* * *
+
+找到Zer,Len: 270
+2019-01-06 10:19:32.367 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: vi
+2019-01-06 10:19:32.369 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 首先，看一下“限额”在哪。把鼠标移动到右上角的“0”上，按下,Len: 903
+2019-01-06 10:19:32.584 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: ca
+2019-01-06 10:19:32.623 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: **<font color="#f00">本文请不要转到明网,Len: 1108
+2019-01-06 10:19:32.981 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: en
+2019-01-06 10:19:32.986 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 1.打开以下链接：  ，等待载入完成。
+
+2.点击右上角的 ,Len: 269
+2019-01-06 10:19:32.995 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: zh-cn
+2019-01-06 10:19:33.362 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 一般来说，有了十个以上的节点，就能愉快打开网站了，但有时候也,Len: 304
+2019-01-06 10:19:33.371 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: zh-cn
+2019-01-06 10:19:33.639 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 一个刚建立的网站，只有本地一个种子，这时候更新发布是非常慢的,Len: 321
+2019-01-06 10:19:33.659 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: zh-cn
+2019-01-06 10:19:34.077 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 想要一个好记的网站地址，注册.bit域名又嫌麻烦，可以使用免,Len: 742
+2019-01-06 10:19:34.134 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: vi
+2019-01-06 10:19:34.138 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 是不是感觉自己网站的网址太乱而且难记，注册bit域名可破！
+,Len: 348
+2019-01-06 10:19:34.179 | DEBUG    | ZiteAnalyze:extractKeyword_auto:75 - Lang of feed: zh-cn
+2019-01-06 10:19:34.603 | DEBUG    | ZiteAnalyze:analyzeFeeds:42 - Feed: 首先进入编辑博文的界面。

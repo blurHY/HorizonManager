@@ -1,0 +1,9 @@
+html,
+body,
+body>div {
+    height: 100vh !important;
+}
+
+.logsPanel .card-header {
+    padding-bottom: 5px !important;
+}

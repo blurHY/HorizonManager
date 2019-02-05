@@ -1,10 +1,12 @@
 <template>
   <div class="content">
     <div class="container-fluid">
-        <transition name="fade" mode="out-in">
-          <!-- your content here -->
+      <transition name="fade" mode="out-in">
+        <!-- your content here -->
+        <keep-alive>
           <router-view></router-view>
-        </transition>
+        </keep-alive>
+      </transition>
     </div>
   </div>
 </template>

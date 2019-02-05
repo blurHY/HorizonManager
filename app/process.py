@@ -1,7 +1,11 @@
-from app import zeronetProc, spiderProc, updateProcessStatus
-from app import conf
+from . import main, conf
+
+import os
 import subprocess
 import threading
+
+spiderProc = None
+zeronetProc = None
 
 
 def check_pid(pid):
@@ -25,10 +29,14 @@ def isRunning(proc):
 def popenAndCall(onStart, onExit, popenArgs):
     def runInThread(onStart, onExit, popenArgs):
         print("Process: {}".format(popenArgs))
-        proc = subprocess.Popen(*popenArgs)
-        onStart(proc)
-        proc.wait()
-        onExit()
+        try:
+            proc = subprocess.Popen(*popenArgs)
+            onStart(proc)
+            proc.wait()
+            onExit()
+        except Exception as e:
+            print(e)
+            main.showMessage("error", "Failed to start process")
         return
 
     thread = threading.Thread(
@@ -40,19 +48,19 @@ def popenAndCall(onStart, onExit, popenArgs):
 def assignZeroNetProcess(p):
     global zeronetProc
     zeronetProc = p
-    updateProcessStatus()
+    main.updateProcessStatus()
 
 
 def assignSpiderProcess(p):
     global spiderProc
     spiderProc = p
-    updateProcessStatus()
+    main.updateProcessStatus()
 
 
 def startZeroNet():
     popenAndCall(
         assignZeroNetProcess,
-        updateProcessStatus,
+        main.updateProcessStatus,
         [[conf.python2Path, conf.zeronetRoot + "zeronet.py"] + conf.zeronetArgs
          ],
     )
@@ -61,7 +69,7 @@ def startZeroNet():
 def startSpider():
     popenAndCall(
         assignSpiderProcess,
-        updateProcessStatus,
+        main.updateProcessStatus,
         [[conf.python3Path, conf.spiderRoot + "HorizonSpider.py"] +
          conf.spiderArgs],
     )

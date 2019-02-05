@@ -10,15 +10,17 @@
     "dev": "vue-cli-service serve --open"
   },
   "dependencies": {
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "bootstrap": "^4.0.0",
     "chartist": "^0.11.0",
     "es6-promise": "^4.2.4",
     "font-awesome": "^4.7.0",
+    "moment": "^2.24.0",
     "socket.io-client": "^2.2.0",
     "url-loader": "^1.1.2",
     "vue": "^2.5.13",
     "vue-clickaway": "^2.1.0",
-    "vue-notifyjs": "^0.3.0",
+    "vue-notifyjs": "^0.4.3",
     "vue-router": "^3.0.1",
     "vue-socket.io": "^3.0.4",
     "vuex": "^3.1.0"

@@ -1,15 +1,24 @@
 <template>
   <div :class="{'nav-open': $sidebar.showSidebar}">
     <notifications></notifications>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-export default {};
+import "@/assets/css/global.css";
+export default {
+  sockets: {
+    redirect(url) {
+      if (url !== location.pathname) location.replace(url);
+    }
+  }
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .vue-notifyjs.notifications {
   .alert {
     z-index: 10000;

@@ -1,5 +1,5 @@
 [[source]]
-url = "https://mirrors.aliyun.com/pypi/simple"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 verify_ssl = true
 name = "pypi"
 
@@ -11,10 +11,13 @@ gevent-websocket = "*"
 psutil = "*"
 watchdog = "*"
 file-read-backwards = "*"
+flask-login = "*"
+humanize = "*"
 
 [dev-packages]
 pylint = "*"
 yapf = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.7"

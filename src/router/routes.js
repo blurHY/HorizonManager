@@ -1,10 +1,11 @@
-import DashboardLayout from "@/layout/dashboard/DashboardLayout.vue";
+import DashboardLayout from "@/layout/dashboard/DashboardLayout";
 // GeneralViews
-import NotFound from "@/pages/NotFoundPage.vue";
+import NotFound from "@/pages/NotFoundPage";
 
 // Admin pages
-import Dashboard from "@/pages/Dashboard.vue";
-import LogPage from "@/pages/LogPage.vue"
+import Dashboard from "@/pages/Dashboard";
+import LogPage from "@/pages/LogPage";
+import Login from "@/pages/Login"
 
 const routes = [{
     path: "/",
@@ -23,6 +24,11 @@ const routes = [{
   {
     path: "*",
     component: NotFound
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login
   }
 ];
 
