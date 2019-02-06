@@ -27,6 +27,12 @@ pipenv install
 
 Requires python >=3.6
 
+## Installation script
+
+For CentOS7:
+
+Download [centos7.sh](./centos7.sh), and `sudo bash centos7.sh`
+
 # Usage
 
 ```bash
