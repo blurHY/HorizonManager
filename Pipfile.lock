@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "044b944320bb8bb98fcdb447b9a7c0c7a8c60030c0eeac4912855a91710c242b"
+            "sha256": "2e31ec64cc42a0d392c4500bafaad645f65fefc7980d044fd2ab32859af9c6ce"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -84,6 +84,21 @@
             "markers": "sys_platform == 'win32'",
             "version": "==0.4.1"
         },
+        "dnspython": {
+            "hashes": [
+                "sha256:36c5e8e38d4369a08b6780b7f27d790a292b2b08eea01607865bf0936c558e01",
+                "sha256:f69c21288a962f4da86e56c4905b49d11aba7938d3d740e80d9e366ee4f1632d"
+            ],
+            "version": "==1.16.0"
+        },
+        "eventlet": {
+            "hashes": [
+                "sha256:c584163e006e613707e224552fafc63e4e0aa31d7de0ab18b481ac0b385254c8",
+                "sha256:d9d31a3c8dbcedbcce5859a919956d934685b17323fc80e1077cb344a2ffa68d"
+            ],
+            "index": "pypi",
+            "version": "==0.24.1"
+        },
         "file-read-backwards": {
             "hashes": [
                 "sha256:78684aafc0471e9e0f62a8662361bfaf70ade3d38333d7f166fd8024a028b1d1",
@@ -141,7 +156,6 @@
                 "sha256:d752bcf1b98174780e2317ada12013d612f05116456133a6acf3e17d43b71f05",
                 "sha256:e5bcc4270671936349249d26140c267397b7b4b1381f5ec8b13c53c5b53ab6e1"
             ],
-            "index": "pypi",
             "version": "==1.4.0"
         },
         "gevent-websocket": {
@@ -230,6 +244,13 @@
                 "sha256:fb7c206e01ad85ce57feeaaa0bf784b97fa3cad0d4a5737bc5295785f5c613a1"
             ],
             "version": "==1.1.0"
+        },
+        "monotonic": {
+            "hashes": [
+                "sha256:23953d55076df038541e648a53676fb24980f7a1be290cdda21300b3bc21dfb0",
+                "sha256:552a91f381532e33cbd07c6a2655a21908088962bb8fa7239ecbcc6ad1140cc7"
+            ],
+            "version": "==1.5"
         },
         "pathtools": {
             "hashes": [

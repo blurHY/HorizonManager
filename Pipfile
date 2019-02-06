@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 flask = "*"
 flask_socketio = "*"
-gevent = "*"
 gevent-websocket = "*"
 psutil = "*"
 watchdog = "*"
@@ -14,6 +13,7 @@ file-read-backwards = "*"
 flask-login = "*"
 humanize = "*"
 better-exceptions = "*"
+eventlet = "*"
 
 [dev-packages]
 pylint = "*"

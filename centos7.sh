@@ -41,4 +41,4 @@ echo python3Path=/usr/bin/python3.6 >> /etc/environment
 echo zeronetRoot=../ZeroNet >> /etc/environment
 echo spiderRoot=../HorizonSpider >> /etc/environment
 export BETTER_EXCEPTIONS=1 >> /etc/environment
-echo "Installation completed"
+echo "Installation completed."

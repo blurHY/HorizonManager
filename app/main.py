@@ -79,10 +79,7 @@ def logout():
 
 def apiLoginCheck(func):
     def wrapper(*args, **kwargs):
-        print("Current user: ", flask_login.current_user)
-        print("Session: " + str(flask.session))
         if flask_login.current_user.is_authenticated:
-            print("Login check passed: " + str(func))
             func(*args, *kwargs)
         else:
             print("Unauthorized: " + str(func))
@@ -183,7 +180,6 @@ def updateBadgeStats():
 
 
 def updateProcessStatus():
-    print("Update process status")
     sio.emit(
         "setProcessStatus", (process.isRunning(process.zeronetProc),
                              process.isRunning(process.spiderProc)),
@@ -214,15 +210,14 @@ def startBroadcastingStats():
             func()
             time.sleep(interval)
 
-    badgeThread = threading.Thread(target=lambda: loop(30, updateBadgeStats))
-    statsThread = threading.Thread(target=lambda: loop(1.5, updateGraphStats))
-
-    badgeThread.daemon = True
-    statsThread.daemon = True
+    badgeThread = threading.Thread(
+        target=lambda: loop(30, updateBadgeStats), daemon=True)
+    statsThread = threading.Thread(
+        target=lambda: loop(3, updateGraphStats), daemon=True)
 
     badgeThread.start()
     statsThread.start()
 
 
 startBroadcastingStats()
-logs.watchLogs()
+# logs.watchLogs() # Disable log watching, use stdout instead

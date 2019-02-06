@@ -15,7 +15,7 @@ class MyHandler(FileSystemEventHandler):
         if on_modified:
             self.on_modified = on_modified
 
-    def on_modified(self, event):
+    def on_any_event(self, event):
         print(
             f'Watcher event, type: {event.event_type}  path : {event.src_path}'
         )

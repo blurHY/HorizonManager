@@ -31,7 +31,7 @@
             :chart-options="systemChart.options"
           >
             <span slot="footer">
-              <i class="ti-reload"></i> Reload per 1.5 seconds
+              <i class="ti-reload"></i> Refresh per 3 seconds
             </span>
             <div slot="legend">
               <i class="fa fa-circle cpu-dot"></i> CPU
@@ -152,6 +152,7 @@ export default {
     setStatus(msg) {
       console.log("Status: " + msg);
       this.status = msg;
+      this.addPanelLogs(msg);
     },
     updateAll() {
       this.$socket.emit("updateAll");
@@ -170,7 +171,9 @@ export default {
             a.search(/error|failed|warn/i) >= 0 ? "danger" : "info"
           }">${a}</span>`
         );
-      // this.$socket.emit("addLogs", arr);
+      if (!this.$root.logs instanceof Array) {
+        this.$root.logs = [];
+      }
       this.$root.logs = this.$root.logs.concat(arr);
     }
   },

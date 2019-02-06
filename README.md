@@ -31,7 +31,9 @@ Requires python >=3.6
 
 For CentOS7:
 
-Download [centos7.sh](./centos7.sh), and `sudo bash centos7.sh`
+Download [centos7.sh](./centos7.sh), and `sudo bash centos7.sh` (Takes about 25 minutes to install)
+
+After installing, re-log-in ssh to activate environment variables settings
 
 # Usage
 

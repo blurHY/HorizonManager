@@ -24,6 +24,9 @@ export default {
   },
   methods: {
     highlight(str) {
+      if (!str) {
+        return "";
+      }
       str = str.replace(/WARNING/, "<span class='text-warning'>$&</span>");
       str = str.replace(
         /DEBUG/,
@@ -53,7 +56,7 @@ export default {
     connect() {},
     addLogs(arr) {
       console.log("Logs addded: " + arr.length);
-      this.$root.logs += arr;
+      this.$root.logs = this.$root.logs.concat(arr);
     }
   },
   mounted() {

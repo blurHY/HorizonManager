@@ -7,11 +7,21 @@ from .config import Config
 
 
 def signal_handler(sig, frame):
+    try:
+        from .process import spiderProc, zeronetProc
+    except:
+        pass
+    else:
+        if spiderProc:
+            spiderProc.terminate()
+        if zeronetProc:
+            zeronetProc.terminate()
     print('Gracefully exit...')
     sys.exit(0)
 
 
 signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGTERM, signal_handler)
 
 app = Flask(__name__, static_folder="../dist", static_url_path="/static")
 app.secret_key = os.environ.get("HorizonSecretKey",
